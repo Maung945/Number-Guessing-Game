@@ -74,16 +74,6 @@ int main(void)
         case 3:
             
             printf("Thank you for playing the game\n");                                             // if user enters to quit the game print the results of the game they played
-            printf("The results of the games played are:\n");
-            if (win == 1)
-            {
-                printf("You have won the game\n");
-                printf("Number of guess required to win are %d\n", numberOfGuess);
-            }
-            else
-            {
-                printf("You have lost the game\n");
-            }
             break;
         }
     } while (option != 3);
