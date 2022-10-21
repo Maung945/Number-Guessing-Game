@@ -9,9 +9,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int max_number = 10;                                                                                // Global variable
+
+
 int main(void)
 {
+    int max_number = 10;                                                                                // Global variable
     int numberOfGuess, guess, option, max;
     int win = 0; 
     int randomNumber;
@@ -49,7 +51,7 @@ int main(void)
                     else
                     {
                         win = 1;
-                        printf("You have guessed the correct number\n");
+                        printf("Your Guess is CORRECT!!\n\n");
                         break;
                     }
                     
@@ -58,22 +60,31 @@ int main(void)
             } while (c[0] != 'q' || randomNumber == guess);
             break;
         case 2:
+            char input;
+            int incomingMax;
+            
+
             printf("Enter the new maximum number:\n");
             do
             {
-                scanf("%d", &max);
                 
+
                 if (max <= 0 || max > 10)                                                           // if the new maximum number is not between 0 to 10
                     printf("Please enter a valid number \n");
                 
                 else                                                                                // if the new number is valid assign it to our global variable
                     max_number = max;
+                
+                
+
             } while (max <= 0 || max > 10);
+            
             printf("The new maximum number generated will be between 0 to %d\n", max_number);
             break;
         case 3:
             
             printf("Thank you for playing the game\n");                                             // if user enters to quit the game print the results of the game they played
+            
             break;
         }
     } while (option != 3);
